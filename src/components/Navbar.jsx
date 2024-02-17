@@ -6,7 +6,7 @@ import logo from '../assets/logo.jpg'
 const Navbar = () => {
   return (
     <nav className="">
-        <Menu theme="dark" className="min-h-[100vh] h-full py-5">
+        <Menu theme="dark" className="min-h-[100vh] py-5">
             <div className="flex items-center gap-5 px-5">
                 <Avatar src={logo} size="large"/>
                 <Typography.Title level={2} ><Link to='/'>Cryptoverse</Link></Typography.Title>

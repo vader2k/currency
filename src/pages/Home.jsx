@@ -10,7 +10,7 @@ import News from "./News"
 
 const Home = () => {
 
-    const { data, isFetching } = useGetCryptosQuery()
+    const { data, isFetching } = useGetCryptosQuery(10)
     console.log(data)
     const globalStats = data?.data?.stats;
     if (isFetching) {
@@ -27,7 +27,7 @@ const Home = () => {
                 <Col span={12}><Statistic title="Total 204h Volume" value={millify(globalStats.total24hVolume)}/></Col>
                 <Col span={12}><Statistic title="Total Markets" value={millify(globalStats.totalMarkets)}/></Col>
             </Row>
-            <div>
+            <div className="w-full flex items-center justify-between">
                 <Title level={2}> Top 10 cryptocurrencies in the world</Title>
                 <Title level={3}><Link to='/cryptocurrencies'>show more</Link></Title>
             </div>
