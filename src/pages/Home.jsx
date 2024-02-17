@@ -36,7 +36,7 @@ const Home = () => {
                 <Title level={2}> Latest Crypto News</Title>
                 <Title level={3}><Link to='/news'>show more</Link></Title>
             </div>
-            <News displayCount={10}/>
+            <News displayCount={6}/>
         </>
     </section>
   )

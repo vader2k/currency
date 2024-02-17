@@ -30,7 +30,7 @@ const Cryptocurrencies = ({simplified}) => {
         <Row gutter={[32, 32]}>
           {cryptos?.map((currency) => (
             <Col key={currency.rank} xs={24} sm={12} lg={6}>
-              <Link to={`/crypto/${currency.rank}`}>
+              <Link to={`/crypto/${currency.uuid}`}>
                 <Card
                   title={ `${currency.rank}. ${currency.name}`}
                   extra= {<img className="w-[30px] h-[30px]" src={currency.iconUrl} />}
