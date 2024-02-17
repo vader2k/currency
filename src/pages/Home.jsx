@@ -5,6 +5,8 @@ const { Title } = Typography
 
 
 import { useGetCryptosQuery } from "../services/cryptoApi"
+import Cryptocurrencies from "./Cryptocurrencies"
+import News from "./News"
 
 const Home = () => {
 
@@ -29,6 +31,12 @@ const Home = () => {
                 <Title level={2}> Top 10 cryptocurrencies in the world</Title>
                 <Title level={3}><Link to='/cryptocurrencies'>show more</Link></Title>
             </div>
+            <Cryptocurrencies simplified/>
+            <div>
+                <Title level={2}> Latest Crypto News</Title>
+                <Title level={3}><Link to='/news'>show more</Link></Title>
+            </div>
+            <News simplified/>
         </>
     </section>
   )
