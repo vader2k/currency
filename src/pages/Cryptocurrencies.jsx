@@ -22,9 +22,11 @@ const Cryptocurrencies = ({simplified}) => {
   return (
     <section>
       <>
-        <div className="max-w-[300px] mx-auto py-5">
+        { !simplified && (<div className="max-w-[300px] mx-auto py-5">
           <Input placeholder="search currency" onChange={(e)=> setSeach(e.target.value)}/>
-        </div>
+        </div>)
+        }
+
         <Row gutter={[32, 32]}>
           {cryptos?.map((currency) => (
             <Col key={currency.rank} xs={24} sm={12} lg={6}>
