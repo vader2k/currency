@@ -6,7 +6,7 @@ const { Title } = Typography;
 const LineCharts = ({ coinHistory, currentPrice, coinName }) => {
     
     const data = coinHistory?.data?.history
-    const items = data.map(({price, timestamp}) => ({
+    const items = data?.map(({price, timestamp}) => ({
         timestamp: new Date(timestamp * 1000).toLocaleDateString(),
         price: parseFloat(price).toFixed(4)
     }))
