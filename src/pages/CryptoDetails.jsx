@@ -17,7 +17,9 @@ const CryptoDetails = () => {
   const { data: coinHistory } = useGetCryptoHistoryQuery({coinId, timePeriod})
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId)
   const cryptoDetails = data?.data?.coin
-  console.log(cryptoDetails)
+  console.log(coinHistory)
+
+  if (isFetching) return "loading..."
 
   const time = [ '3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y' ]
 
@@ -63,7 +65,7 @@ const CryptoDetails = () => {
           onChange={(value) => setTimePeriod(value)}
         >
           {time.map((date) => (
-            <Option key={date} value={date}>{date}</Option>
+            <Option key={date}value={date} >{date}</Option>
           ))}
         </Select>
         {/* times chart */}

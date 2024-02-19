@@ -10,9 +10,12 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
             <Title level={2}>
                 {coinName} Price Chart
             </Title>
-            <Col>
+            <Col className="w-full flex items-center justify-between">
                 <Title level={5}>
                     {coinHistory?.data?.change}
+                </Title>
+                <Title level={5}>
+                    Current {coinName} price: ${currentPrice} 
                 </Title>
             </Col>
         </Row>
