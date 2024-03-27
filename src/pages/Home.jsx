@@ -16,6 +16,7 @@ const Home = () => {
     if (isFetching) {
         return <div>Loading...</div>
     }
+    
   return (
     <section>
         <>
